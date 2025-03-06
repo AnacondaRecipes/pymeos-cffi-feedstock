@@ -17,17 +17,17 @@ source:
 build:
   skip: true  # [win or py<37]
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
   host:
     - python
     - setuptools >=61.0
     - cffi
     - pip
+    - wheel
     - meos >={{ minor_version }},<{{ next_minor_version }}
   run:
     - python
@@ -52,6 +52,7 @@ about:
     of the necessary conversions between Python and C data types, as well as managing the errors occurring in the C
     library.
   license: PostgreSQL
+  license_family: OTHER
   license_file: LICENSE.txt
   home: https://pymeos.readthedocs.io
   doc_url: https://pymeos.readthedocs.io
@@ -61,3 +62,5 @@ extra:
   recipe-maintainers:
     - Diviloper
     - estebanzimanyi
+  skip-lints:
+    - host_section_needs_exact_pinnings
