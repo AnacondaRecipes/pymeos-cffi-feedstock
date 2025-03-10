@@ -51,11 +51,9 @@ about:
   license_file: LICENSE.txt
   home: https://pymeos.readthedocs.io
   doc_url: https://pymeos.readthedocs.io
-  dev_url: https://github.com/MobilityDB/PyMEOS
+  dev_url: https://github.com/MobilityDB/PyMEOS-CFFI
 
 extra:
   recipe-maintainers:
     - Diviloper
     - estebanzimanyi
-  skip-lints:
-    - host_section_needs_exact_pinnings
