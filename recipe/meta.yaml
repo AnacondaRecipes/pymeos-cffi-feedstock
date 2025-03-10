@@ -49,7 +49,7 @@ about:
   license: PostgreSQL
   license_family: OTHER
   license_file: LICENSE.txt
-  home: https://pymeos.readthedocs.io
+  home: https://github.com/MobilityDB/PyMEOS-CFFI
   doc_url: https://pymeos.readthedocs.io
   dev_url: https://github.com/MobilityDB/PyMEOS-CFFI
 
