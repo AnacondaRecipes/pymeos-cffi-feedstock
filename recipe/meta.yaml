@@ -1,10 +1,5 @@
 {% set name = "pymeos-cffi" %}
 {% set version = "1.2.0" %}
-{% set major = 1 %}
-{% set minor = 2 %}
-{% set patch = 0 %}
-{% set minor_version = major ~ '.' ~ minor %}
-{% set next_minor_version = major ~ '.' ~ (minor + 1) %}
 
 package:
   name: {{ name|lower }}
@@ -28,11 +23,11 @@ requirements:
     - cffi
     - pip
     - wheel
-    - meos >={{ minor_version }},<{{ next_minor_version }}
+    - meos >=1.2,<1.3
   run:
     - python
     - cffi
-    - meos >={{ minor_version }},<{{ next_minor_version }}
+    - meos >=1.2,<1.3
     - python-dateutil
     - shapely
 
